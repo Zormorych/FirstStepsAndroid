@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    //INTENT explicito
+    //Explicit INTENT
     @Override
     protected void onDestroy(){
         super.onDestroy();
