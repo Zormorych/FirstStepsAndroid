@@ -1,6 +1,7 @@
 package com.example.helloworld;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -23,11 +24,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    //Explicit INTENT
+    //Implicit INTENT
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        Intent i = new Intent(this, Activity2.class);
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse("https://www.youtube.com/watch?v=TflV1h2xnds"));
         startActivity(i);
     }
 }
